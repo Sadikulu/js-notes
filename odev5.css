@@ -49,11 +49,25 @@ body {
   text-align: center;
 }
 
-.delete {
+#delete {
   border: none;
   background-color: transparent;
 }
-.update {
+#update {
   border: none;
   background-color: transparent;
+}
+#tamam {
+  border: none;
+  background-color: transparent;
+}
+#iptal {
+  border: none;
+  background-color: transparent;
+}
+.gizle {
+  display: none;
+}
+.acik {
+  display: inline-block;
 }

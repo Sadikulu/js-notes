@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Ali",
+        lastName: "Gel",
+        salary: 10000,
+        department: "IT",
+      };
+      let message = `${person.firstName} ${person.lastName} isimli personel ${person.department} depatmaninda çalişiyor ve maaşi ${person.salary}`;
+      console.log(message);
+
+      //1.Yöntem
+      /* const firstName=person.firstName
+      const lastName=person.lastName
+      const department=person.department
+      const fsalary=person.salary */
+
+      //2.Yöntem
+      const { firstName, lastName, salary, department } = person;
+      message = `${firstName} ${lastName} isimli personel ${department} depatmaninda çalişiyor ve maaşi ${salary}`;
+      console.log(message);
+    </script>
+  </body>
+</html>
