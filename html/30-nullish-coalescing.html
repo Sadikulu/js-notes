@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = {
+        firstName: "Ali",
+        lastName: "Veli",
+      };
+      // user = null;
+
+      //if metod
+      /* if (user === null || user === undefined) {
+        user = { firstName: "Anonymous", lastName: "" };
+      } */
+
+      //ternary metod
+      /* user =
+        user === null || user === undefined
+          ? { firstName: "Anonymous", lastName: "" }
+          : user; */
+
+      //nullish
+      // user = user ?? { firstName: "Anonymous", lastName: "" };
+
+      const displayName = `${user.firstName} ${user.lastName}`;
+
+      console.log(displayName);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><em>Hello DOM</em></h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque maiores
+      ratione officia sed voluptates ut odit possimus, harum nemo cum
+      consequatur! Quasi reiciendis, temporibus aliquid asperiores est obcaecati
+      quidem?
+    </p>
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <script>
+      const headingEl = document.querySelector("h1");
+      console.log(headingEl.innerText); //getter
+      headingEl.innerText = "<u>Hello JavaScript</u>"; //setter
+      headingEl.innerHTML = "<u><em>Hello JavaScript</em></u>";
+
+      const homeEl = document.querySelector(".menu li:last-child");
+      console.log(homeEl.innerHTML);
+      homeEl.innerHTML = "Ana Sayfa";
+
+      const listItems = document.querySelectorAll(".menu li");
+      console.log(listItems);
+      console.log(listItems.length);
+      listItems[0].innerHTML = "Contact";
+      console.log(listItems[0].innerText);
+      console.log(typeof listItems[0]);
+      console.log(typeof listItems);
+
+      const dizi = ["ali", "veli"];
+      console.log(typeof dizi);
+      console.log(typeof dizi[0]);
+    </script>
+  </body>
+</html>

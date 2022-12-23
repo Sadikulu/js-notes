@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .baslik {
+        font: size 3re;
+        color: aquamarine;
+        padding: 1rem;
+        text-align: center;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="pageTitle"><em>Hello DOM</em></h1>
+    <p id="about">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque maiores
+      ratione officia sed voluptates ut odit possimus, harum nemo cum
+      consequatur! Quasi reiciendis, temporibus aliquid asperiores est obcaecati
+      quidem?
+    </p>
+    <script>
+      const pT = document.querySelector("#pageTitle");
+      pT.classList.add("baslik");
+      pT.classList.add("red");
+      console.log(pT.classList);
+
+      const aboutEl = document.querySelector("#about");
+      aboutEl.classList.add("blue");
+    </script>
+  </body>
+</html>

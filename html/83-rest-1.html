@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+  </head>
+  <body>
+    <script>
+      const sum = (...nums) => {
+        const total = nums.reduce((t, x) => t + x, 0);
+        console.log(total);
+      };
+      sum(34, 6);
+      sum(34, 6, 78);
+      sum(34, 6, 78, 258, 2654, 3698, 36547, 3654);
+    </script>
+  </body>
+</html>

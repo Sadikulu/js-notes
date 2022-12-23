@@ -1,0 +1,59 @@
+:root {
+  --color1: #ffc000;
+  --color2: #2b292a;
+  --color3: #cdcdcd;
+  --color4: #e8e8e8;
+  --color5: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.boyut {
+  min-width: 500px !important;
+  width: 50% !important;
+}
+
+.cizgili > thead > tr > * {
+  border: 3px solid var(--color5);
+  background-color: var(--color2);
+  color: var(--color5);
+}
+
+.cizgili > tbody > tr:nth-of-type(odd) > * {
+  border: 3px solid var(--color5);
+  background-color: var(--color3);
+}
+
+.cizgili > tbody > tr:nth-of-type(even) > * {
+  border: 3px solid var(--color5);
+  background-color: var(--color4);
+}
+
+.cizgili > tfoot > tr:nth-of-type(odd) > * {
+  border: 3px solid var(--color5);
+  background-color: var(--color4);
+}
+.cizgili tfoot td:nth-child(2) {
+  text-align: center;
+}
+
+.cizgili tbody td:nth-child(3) {
+  text-align: center;
+}
+
+.cizgili thead th:nth-child(3) {
+  text-align: center;
+}
+
+.delete {
+  border: none;
+  background-color: transparent;
+}
+.update {
+  border: none;
+  background-color: transparent;
+}

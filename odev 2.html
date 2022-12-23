@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="txtNumber" />
+    <button onclick="sonuc()">Sonuç</button>
+
+    <script>
+      const numEl = document.querySelector("#txtNumber");
+
+      function sonuc() {
+        const result = isPalindromeNumber(numEl.value);
+        alert(`${numEl.value} is ${result ? "" : "not"} palindrome`);
+      }
+
+      function isPalindromeNumber(num) {
+        let yeni = "";
+        let flag = true;
+        let temp = num;
+        while (temp > 0) {
+          let bas = temp % 10;
+          yeni += bas;
+          temp = Math.floor(temp / 10);
+        }
+
+        if (num != Number(yeni)) {
+          flag = false;
+        }
+        return flag;
+      }
+    </script>
+  </body>
+</html>

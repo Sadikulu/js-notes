@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/42-scope-practice.css" />
+  </head>
+  <body>
+    <button id="btnHello" onclick="sayHello1()">Say Hello</button>
+    <script>
+      //1.yontem
+      const sayHello1 = () => {
+        console.log("Say Hello 1");
+      };
+      //2.yontem
+      const sayHello2 = () => {
+        console.log("Say Hello 2");
+      };
+      document.querySelector("#btnHello").onclick = sayHello2;
+      //3.yontem
+      document.querySelector("#btnHello").onclick = () => {
+        console.log("Say Hello 3");
+      };
+      //4.yontem
+      const sayHello4 = () => {
+        console.log("Say Hello 4");
+      };
+      document.querySelector("#btnHello").addEventListener("click", sayHello4);
+      //5.yontem
+      document.querySelector("#btnHello").addEventListener("click", () => {
+        console.log("Say Hello 5");
+      });
+    </script>
+  </body>
+</html>

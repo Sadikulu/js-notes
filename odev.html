@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="txtNum1" />
+    <select name="math" id="islem">
+      <option value="topla">Topla</option>
+      <option value="cikar">Çikarma</option>
+      <option value="carp">Çarpma</option>
+      <option value="bolum">Bölme</option>
+    </select>
+    <input type="number" id="txtNum2" />
+    <button onclick="sonuc()">Sonuç</button>
+    <label for="islem">=</label>
+    <span id="result"></span>
+    <script>
+      const num1El = document.querySelector("#txtNum1");
+      const num2El = document.querySelector("#txtNum2");
+      const resultEl = document.querySelector("#result");
+      const opt = document.querySelector("#islem");
+      function sonuc() {
+        if (opt.value == "topla") {
+          const top = Number(num1El.value) + Number(num2El.value);
+          resultEl.innerText = top;
+        }
+        if (opt.value == "cikar") {
+          const cikar = Number(num1El.value) - Number(num2El.value);
+          resultEl.innerText = cikar;
+        }
+        if (opt.value == "carp") {
+          const carp = Number(num1El.value) * Number(num2El.value);
+          resultEl.innerText = carp;
+        }
+        if (opt.value == "bolum") {
+          const bolum = Number(num1El.value) / Number(num2El.value);
+          resultEl.innerText = bolum;
+        }
+      }
+    </script>
+  </body>
+</html>
