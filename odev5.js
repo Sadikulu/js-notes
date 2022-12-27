@@ -131,14 +131,14 @@ const tamam = (nameT, pointT) => {
     };
   });
 };
-tamam();
-/* let mode = true;
-document.querySelector("#btn").addEventListener("click", () => {
-  if (mode) {
-  } else {
-  }
-  mode = !mode;
-}); */
+
+/* const count = () => {
+    if (sil()) {
+      index--;
+    } else {
+    }
+   
+}; */
 const average = (index, toplam) => {
   ortalama = Math.floor(toplam / index);
   const ort = document.querySelector(".cizgili tfoot td:nth-child(2)");
