@@ -6,7 +6,6 @@ const updateEl = document.querySelectorAll("#update");
 const tamamEl = document.querySelectorAll("#tamam");
 const iptalEl = document.querySelectorAll("#iptal");
 const tblStudentsTbody = document.querySelector("tbody");
-// let index = 0;
 let toplam = 0;
 let ortalama = 0;
 let sayi = 1;
@@ -86,7 +85,6 @@ const ekle = () => {
         </td>`;
 
   tblStudentsTbody.append(newLi);
-  // toplam += Number(txtPoint.value);
   txtName.value = "";
   txtPoint.value = "";
   txtName.focus();
@@ -123,11 +121,10 @@ const düzenle = () => {
       const point = trEl.querySelector("td:nth-child(3)");
       const nameEl = trEl.querySelector("td:nth-child(2)").innerText;
       const pointEl = trEl.querySelector("td:nth-child(3)").innerText;
-      name.innerHTML = `<input class="ali" type="text" id="name" placeholder=${name.innerText} />`;
-      point.innerHTML = `<input class="veli" type="number" id="point" placeholder=${point.innerText} />`;
+      name.innerHTML = `<input type="text" id="name" placeholder=${name.innerText} />`;
+      point.innerHTML = `<input type="number" id="point" placeholder=${point.innerText} />`;
       iptal(nameEl, pointEl);
       tamam(sSayi);
-      // average(index, toplam);
     };
   });
 };
@@ -142,7 +139,7 @@ const iptal = (nameEl, pointEl) => {
       const point = trEl.querySelector("td:nth-child(3)");
       name.innerHTML = `<td>${nameEl}</td>`;
       point.innerHTML = `<td>${pointEl}</td>`;
-      // average(index, toplam);
+      average(indexAlma(), toplamAlma());
     };
   });
 };
@@ -150,12 +147,9 @@ const iptal = (nameEl, pointEl) => {
 const tamam = (numaralar) => {
   document.querySelectorAll("#tamam").forEach((button) => {
     button.onclick = (e) => {
-      const aliEl = document.querySelector(".ali");
-      const veliEl = document.querySelector(".veli");
-      console.log(numaralar);
-      console.log(aliEl.value);
-      console.log(veliEl.value);
-      veriDuzenle(numaralar, aliEl.value, veliEl.value);
+      const nameT = document.querySelector("#name");
+      const pointT = document.querySelector("#point");
+      veriDuzenle(numaralar, nameT.value, pointT.value);
       const trEl = e.target.closest("tr");
       trEl.querySelector(".s2").style.display = "none";
       trEl.querySelector(".s1").style.display = "inline-block";
